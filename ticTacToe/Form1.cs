@@ -12,8 +12,7 @@ namespace ticTacToe
 {
 	public partial class mainForm : Form
 	{
-		private int [,] board;
-		private string [,] textButtonValues;
+		private Board board = new Board();
 		public mainForm()
 		{
 			InitializeComponent();
@@ -28,36 +27,36 @@ namespace ticTacToe
 			switch (myButton.Name)
 			{
 				case "firstLeftButton":
-					textButtonValues[0, 0] = "X";
+					board.Grid[0, 0].charVal = 'X';
 					break;
 				case "firstMiddleButton":
-					textButtonValues[0, 1] = "X";
+					board.Grid[0, 1].charVal = 'X';
 					break;
 
 				case "firstRightButton":
-					textButtonValues[0, 2] = "X";
+					board.Grid[0, 2].charVal = 'X';
 					break;
 
 				case "secondLeftButton":
-					textButtonValues[1, 0] = "X";
+					board.Grid[1, 0].charVal = 'X';
 					break;
 				case "secondMiddleButton":
-					textButtonValues[1, 1] = "X";
+					board.Grid[1, 1].charVal = 'X';
 					break;
 
 				case "secondRightButton":
-					textButtonValues[1, 2] = "X";
+					board.Grid[1, 2].charVal = 'X';
 					break;
 
 				case "thirdLeftButton":
-					textButtonValues[2, 0] = "X";
+					board.Grid[2, 0].charVal = 'X';
 					break;
 				case "thirdMiddleButton":
-					textButtonValues[2, 1] = "X";
+					board.Grid[2, 1].charVal = 'X';
 					break;
 
 				case "thirdRightButton":
-					textButtonValues[2, 2] = "X";
+					board.Grid[2, 2].charVal = 'X';
 					break;
 			}
 			updateAllButtons();
