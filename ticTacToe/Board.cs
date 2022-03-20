@@ -8,58 +8,100 @@ namespace ticTacToe
 {
     internal class Board
     {
-		// 1 for an X, 0 for an 0 and -1 for empty
-		private int [,] board =
+		public Mark [,] Grid =
 		{
-			{ -1, -1, -1 },
-			{ -1, -1, -1 },
-			{ -1, -1 ,-1 }
+			{ new Mark(), new Mark(), new Mark() },
+			{ new Mark(), new Mark(), new Mark() },
+			{ new Mark(), new Mark() ,new Mark() }
 		};
-
-		public int[,] getBoardInt()
+		public Board()
         {
-			return board;
+
+        }
+		public Board(Board b)
+        {
+			Grid = b.Grid;
         }
 
-		public char[,] getBoardChar()
-		{
-			char[,] charBoard = new char[3, 3];
-
-			for(int i = 0; i < 3; i++)
+        public int Winner
+        {
+            get
             {
-				for (int j = 0; j < 3 ; j++)
+                for (int i = 0; i < 3; i++)
                 {
-					charBoard[i, j] = getPosChar(i, j);
-                }
-            }
-			return charBoard;
-		}
+                    // Horizontal
+                    if (Grid[0, i].charVal == 'X'
+                        && Grid[1, i].charVal == 'X'
+                        && Grid[2, i].charVal == 'X')
+                        return 1;
 
-		public int getPosInt(int x,int y)
-        {
-			return board[x,y];
+                    // Vertical
+                    if (Grid[i, 0].charVal == 'X'
+                        && Grid[i, 1].charVal == 'X'
+                        && Grid[i, 2].charVal == 'X')
+                        return 1;
+
+                    // Horizontal
+                    if (Grid[0, i].charVal == '0'
+                        && Grid[1, i].charVal == '0'
+                        && Grid[2, i].charVal == '0')
+                        return 2;
+
+                    // Vertical
+                    if (Grid[i, 0].charVal == '0'
+                        && Grid[i, 1].charVal == '0'
+                        && Grid[i, 2].charVal == '0')
+                        return 2;
+                }
+                // Diaganal
+                if (Grid[0, 0].charVal == 'X'
+                    && Grid[1, 1].charVal == 'X'
+                    && Grid[2, 2].charVal == 'X')
+                    return 1;
+
+                // Diaganal
+                if (Grid[0, 2].charVal == 'X'
+                    && Grid[1, 1].charVal == 'X'
+                    && Grid[2, 0].charVal == 'X')
+                    return 1;
+
+                // Diaganal
+                if (Grid[0, 0].charVal == '0'
+                    && Grid[1, 1].charVal == '0'
+                    && Grid[2, 2].charVal == '0')
+                    return 2;
+
+                // Diaganal
+                if (Grid[0, 2].charVal == '0'
+                    && Grid[1, 1].charVal == '0'
+                    && Grid[2, 0].charVal == '0')
+                    return 2;
+
+                // No winners
+                return 0;
+            }
         }
 
-		public char getPosChar(int x, int y)
+        public bool DetectGameOver
         {
-			if (board[x, y] == 0)
-				return '0';
-			else if (board[x, y] == 1)
-				return 'X';
-			else
-				return ' ';
-		}
-
-		public bool setPos(int x, int y, int i)
-        {
-			if (i < -1 || i > 1)
-				return false;
-
-			if (x < 0 || x > 3 || y < 0 || y > 3)
-				return false;
-
-			board[x, y] = i;
-			return true;
+            get
+            {
+                // If someone has already won.
+                if (Winner != 0)
+                {
+                    return true;
+                }
+                foreach (Mark m in Grid)
+                {
+                    if (m.charVal == ' ')
+                    {
+                        // There's still an empty space that can be played on.
+                        return false;
+                    }
+                }
+                // There are no more empty spaces.
+                return true;
+            }
         }
     }
 }
