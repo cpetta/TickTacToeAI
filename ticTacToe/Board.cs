@@ -49,5 +49,17 @@ namespace ticTacToe
 			else
 				return ' ';
 		}
+
+		public bool setPos(int x, int y, int i)
+        {
+			if (i < -1 || i > 1)
+				return false;
+
+			if (x < 0 || x > 3 || y < 0 || y > 3)
+				return false;
+
+			board[x, y] = i;
+			return true;
+        }
     }
 }
