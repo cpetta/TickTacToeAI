@@ -61,6 +61,15 @@ namespace ticTacToe
 			}
 			updateAllButtons();
 			disableAllButtons();
+			
+			if(board.Winner == 1)
+				WinnerLabel.Text = "X Wins";
+
+			if (board.Winner == 2)
+				WinnerLabel.Text = "0 Wins";
+
+			if (board.DetectGameOver && board.Winner != 0)
+				WinnerLabel.Text = "Draw";
 		}
 
 		private void updateAllButtons()

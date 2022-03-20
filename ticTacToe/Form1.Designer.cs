@@ -38,13 +38,15 @@
             this.thirdMiddleButton = new System.Windows.Forms.Button();
             this.thirdRightButton = new System.Windows.Forms.Button();
             this.aiButton = new System.Windows.Forms.Button();
+            this.WinnerLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // firstLeftButton
             // 
-            this.firstLeftButton.Location = new System.Drawing.Point(29, 46);
+            this.firstLeftButton.Location = new System.Drawing.Point(39, 57);
+            this.firstLeftButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.firstLeftButton.Name = "firstLeftButton";
-            this.firstLeftButton.Size = new System.Drawing.Size(71, 78);
+            this.firstLeftButton.Size = new System.Drawing.Size(95, 96);
             this.firstLeftButton.TabIndex = 0;
             this.firstLeftButton.Text = "firstLeft";
             this.firstLeftButton.UseVisualStyleBackColor = true;
@@ -52,9 +54,10 @@
             // 
             // firstMiddleButton
             // 
-            this.firstMiddleButton.Location = new System.Drawing.Point(121, 46);
+            this.firstMiddleButton.Location = new System.Drawing.Point(161, 57);
+            this.firstMiddleButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.firstMiddleButton.Name = "firstMiddleButton";
-            this.firstMiddleButton.Size = new System.Drawing.Size(71, 78);
+            this.firstMiddleButton.Size = new System.Drawing.Size(95, 96);
             this.firstMiddleButton.TabIndex = 1;
             this.firstMiddleButton.Text = "firstMiddle";
             this.firstMiddleButton.UseVisualStyleBackColor = true;
@@ -62,9 +65,10 @@
             // 
             // firstRightButton
             // 
-            this.firstRightButton.Location = new System.Drawing.Point(211, 46);
+            this.firstRightButton.Location = new System.Drawing.Point(281, 57);
+            this.firstRightButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.firstRightButton.Name = "firstRightButton";
-            this.firstRightButton.Size = new System.Drawing.Size(71, 78);
+            this.firstRightButton.Size = new System.Drawing.Size(95, 96);
             this.firstRightButton.TabIndex = 2;
             this.firstRightButton.Text = "firstRight";
             this.firstRightButton.UseVisualStyleBackColor = true;
@@ -72,9 +76,10 @@
             // 
             // secondLeftButton
             // 
-            this.secondLeftButton.Location = new System.Drawing.Point(29, 144);
+            this.secondLeftButton.Location = new System.Drawing.Point(39, 177);
+            this.secondLeftButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.secondLeftButton.Name = "secondLeftButton";
-            this.secondLeftButton.Size = new System.Drawing.Size(71, 78);
+            this.secondLeftButton.Size = new System.Drawing.Size(95, 96);
             this.secondLeftButton.TabIndex = 3;
             this.secondLeftButton.Text = "secondLeft";
             this.secondLeftButton.UseVisualStyleBackColor = true;
@@ -82,9 +87,10 @@
             // 
             // secondMiddleButton
             // 
-            this.secondMiddleButton.Location = new System.Drawing.Point(121, 144);
+            this.secondMiddleButton.Location = new System.Drawing.Point(161, 177);
+            this.secondMiddleButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.secondMiddleButton.Name = "secondMiddleButton";
-            this.secondMiddleButton.Size = new System.Drawing.Size(71, 78);
+            this.secondMiddleButton.Size = new System.Drawing.Size(95, 96);
             this.secondMiddleButton.TabIndex = 4;
             this.secondMiddleButton.Text = "secondMiddle";
             this.secondMiddleButton.UseVisualStyleBackColor = true;
@@ -92,9 +98,10 @@
             // 
             // secondRightButton
             // 
-            this.secondRightButton.Location = new System.Drawing.Point(211, 144);
+            this.secondRightButton.Location = new System.Drawing.Point(281, 177);
+            this.secondRightButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.secondRightButton.Name = "secondRightButton";
-            this.secondRightButton.Size = new System.Drawing.Size(71, 78);
+            this.secondRightButton.Size = new System.Drawing.Size(95, 96);
             this.secondRightButton.TabIndex = 5;
             this.secondRightButton.Text = "secondRight";
             this.secondRightButton.UseVisualStyleBackColor = true;
@@ -102,9 +109,10 @@
             // 
             // thirdLeftButton
             // 
-            this.thirdLeftButton.Location = new System.Drawing.Point(29, 246);
+            this.thirdLeftButton.Location = new System.Drawing.Point(39, 303);
+            this.thirdLeftButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.thirdLeftButton.Name = "thirdLeftButton";
-            this.thirdLeftButton.Size = new System.Drawing.Size(71, 78);
+            this.thirdLeftButton.Size = new System.Drawing.Size(95, 96);
             this.thirdLeftButton.TabIndex = 6;
             this.thirdLeftButton.Text = "thirdLeft";
             this.thirdLeftButton.UseVisualStyleBackColor = true;
@@ -112,9 +120,10 @@
             // 
             // thirdMiddleButton
             // 
-            this.thirdMiddleButton.Location = new System.Drawing.Point(121, 246);
+            this.thirdMiddleButton.Location = new System.Drawing.Point(161, 303);
+            this.thirdMiddleButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.thirdMiddleButton.Name = "thirdMiddleButton";
-            this.thirdMiddleButton.Size = new System.Drawing.Size(71, 78);
+            this.thirdMiddleButton.Size = new System.Drawing.Size(95, 96);
             this.thirdMiddleButton.TabIndex = 7;
             this.thirdMiddleButton.Text = "thirdMiddle";
             this.thirdMiddleButton.UseVisualStyleBackColor = true;
@@ -122,9 +131,10 @@
             // 
             // thirdRightButton
             // 
-            this.thirdRightButton.Location = new System.Drawing.Point(211, 246);
+            this.thirdRightButton.Location = new System.Drawing.Point(281, 303);
+            this.thirdRightButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.thirdRightButton.Name = "thirdRightButton";
-            this.thirdRightButton.Size = new System.Drawing.Size(71, 78);
+            this.thirdRightButton.Size = new System.Drawing.Size(95, 96);
             this.thirdRightButton.TabIndex = 8;
             this.thirdRightButton.Text = "thirdRight";
             this.thirdRightButton.UseVisualStyleBackColor = true;
@@ -132,19 +142,30 @@
             // 
             // aiButton
             // 
-            this.aiButton.Location = new System.Drawing.Point(29, 363);
+            this.aiButton.Location = new System.Drawing.Point(39, 447);
+            this.aiButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.aiButton.Name = "aiButton";
-            this.aiButton.Size = new System.Drawing.Size(253, 23);
+            this.aiButton.Size = new System.Drawing.Size(337, 28);
             this.aiButton.TabIndex = 9;
             this.aiButton.Text = "AI Take Turn";
             this.aiButton.UseVisualStyleBackColor = true;
             this.aiButton.Click += new System.EventHandler(this.aiButton_Click);
             // 
+            // WinnerLabel
+            // 
+            this.WinnerLabel.AutoSize = true;
+            this.WinnerLabel.Location = new System.Drawing.Point(13, 13);
+            this.WinnerLabel.Name = "WinnerLabel";
+            this.WinnerLabel.Size = new System.Drawing.Size(100, 16);
+            this.WinnerLabel.TabIndex = 10;
+            this.WinnerLabel.Text = "No Winners Yet";
+            // 
             // mainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 422);
+            this.ClientSize = new System.Drawing.Size(455, 519);
+            this.Controls.Add(this.WinnerLabel);
             this.Controls.Add(this.aiButton);
             this.Controls.Add(this.thirdRightButton);
             this.Controls.Add(this.thirdMiddleButton);
@@ -155,9 +176,11 @@
             this.Controls.Add(this.firstRightButton);
             this.Controls.Add(this.firstMiddleButton);
             this.Controls.Add(this.firstLeftButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "mainForm";
             this.Text = "Tic Tac Toe AI";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -173,6 +196,7 @@
         private System.Windows.Forms.Button thirdMiddleButton;
         private System.Windows.Forms.Button thirdRightButton;
         private System.Windows.Forms.Button aiButton;
+        private System.Windows.Forms.Label WinnerLabel;
     }
 }
 
