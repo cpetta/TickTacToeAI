@@ -17,21 +17,6 @@ namespace ticTacToe
 		public mainForm()
 		{
 			InitializeComponent();
-
-			// 1 for an X, 0 for an 0 and -1 for empty
-			board = new int[3,3]
-			{
-				{ -1, -1, -1 },
-				{ -1, -1, -1 },
-				{ -1, -1 ,-1 }
-			};
-
-			textButtonValues = new string[3, 3]
-			{
-				{ " ", " ", " " },
-				{ " ", " ", " " },
-				{ " ", " ", " " }
-			};
 		}
 
 		// Human Player Button Press
