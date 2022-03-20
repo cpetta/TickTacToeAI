@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ticTacToe
 {
-    internal class utilities
+    internal class Utilities
     {
     }
 }
