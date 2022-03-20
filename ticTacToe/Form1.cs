@@ -74,41 +74,41 @@ namespace ticTacToe
 
 		private void updateAllButtons()
 		{
-			firstLeftButton.Text = textButtonValues[0,0]; 
-			firstMiddleButton.Text = textButtonValues[0,1];
-			firstRightButton.Text = textButtonValues[0,2];
-			secondLeftButton.Text = textButtonValues[1,0];
-			secondMiddleButton.Text = textButtonValues[1,1];
-			secondRightButton.Text = textButtonValues[1,2];
-			thirdLeftButton.Text = textButtonValues[2,0];
-			thirdMiddleButton.Text = textButtonValues[2,1];
-			thirdRightButton.Text = textButtonValues[2,2];
+			firstLeftButton.Text    = board.Grid[0, 0].ToString(); 
+			firstMiddleButton.Text  = board.Grid[0, 1].ToString();
+			firstRightButton.Text   = board.Grid[0, 2].ToString();
+			secondLeftButton.Text   = board.Grid[1, 0].ToString();
+			secondMiddleButton.Text = board.Grid[1, 1].ToString();
+			secondRightButton.Text  = board.Grid[1, 2].ToString();
+			thirdLeftButton.Text    = board.Grid[2, 0].ToString();
+			thirdMiddleButton.Text  = board.Grid[2, 1].ToString();
+			thirdRightButton.Text   = board.Grid[2, 2].ToString();
 		}
 
 		private void disableAllButtons()
 		{
-			firstLeftButton.Enabled = false;
-			firstMiddleButton.Enabled = false;
-			firstRightButton.Enabled = false;
-			secondLeftButton.Enabled = false;
+			firstLeftButton.Enabled    = false;
+			firstMiddleButton.Enabled  = false;
+			firstRightButton.Enabled   = false;
+			secondLeftButton.Enabled   = false;
 			secondMiddleButton.Enabled = false;
-			secondRightButton.Enabled = false;
-			thirdLeftButton.Enabled = false;
-			thirdMiddleButton.Enabled = false;
-			thirdRightButton.Enabled = false;
+			secondRightButton.Enabled  = false;
+			thirdLeftButton.Enabled    = false;
+			thirdMiddleButton.Enabled  = false;
+			thirdRightButton.Enabled   = false;
 		}
 
 		private void enableAllButtons()
 		{
-			firstLeftButton.Enabled = true;
-			firstMiddleButton.Enabled = true;
-			firstRightButton.Enabled = true;
-			secondLeftButton.Enabled = true;
+			firstLeftButton.Enabled    = true;
+			firstMiddleButton.Enabled  = true;
+			firstRightButton.Enabled   = true;
+			secondLeftButton.Enabled   = true;
 			secondMiddleButton.Enabled = true;
-			secondRightButton.Enabled = true;
-			thirdLeftButton.Enabled = true;
-			thirdMiddleButton.Enabled = true;
-			thirdRightButton.Enabled = true;
+			secondRightButton.Enabled  = true;
+			thirdLeftButton.Enabled    = true;
+			thirdMiddleButton.Enabled  = true;
+			thirdRightButton.Enabled   = true;
 		}
 
 		private void aiButton_Click(object sender, EventArgs e)
