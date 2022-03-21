@@ -27,62 +27,54 @@ namespace ticTacToe
 			switch (myButton.Name)
 			{
 				case "firstLeftButton":
-					board.Grid[0, 0].charVal = 'X';
+					board.Grid[0, 0] = 1;
 					break;
 				case "firstMiddleButton":
-					board.Grid[0, 1].charVal = 'X';
+					board.Grid[0, 1] = 1;
 					break;
 
 				case "firstRightButton":
-					board.Grid[0, 2].charVal = 'X';
+					board.Grid[0, 2] = 1;
 					break;
 
 				case "secondLeftButton":
-					board.Grid[1, 0].charVal = 'X';
+					board.Grid[1, 0] = 1;
 					break;
 				case "secondMiddleButton":
-					board.Grid[1, 1].charVal = 'X';
+					board.Grid[1, 1] = 1;
 					break;
 
 				case "secondRightButton":
-					board.Grid[1, 2].charVal = 'X';
+					board.Grid[1, 2] = 1;
 					break;
 
 				case "thirdLeftButton":
-					board.Grid[2, 0].charVal = 'X';
+					board.Grid[2, 0] = 1;
 					break;
 				case "thirdMiddleButton":
-					board.Grid[2, 1].charVal = 'X';
+					board.Grid[2, 1] = 1;
 					break;
 
 				case "thirdRightButton":
-					board.Grid[2, 2].charVal = 'X';
+					board.Grid[2, 2] = 1;
 					break;
 			}
 			updateAllButtons();
 			disableAllButtons();
-			
-			if(board.Winner == 0)
-				WinnerLabel.Text = "X Wins";
-
-			if (board.Winner == 2)
-				WinnerLabel.Text = "0 Wins";
-
-			if (board.DetectGameOver && board.Winner == 0)
-				WinnerLabel.Text = "Draw";
+			updateWinnerLabel();
 		}
 
 		private void updateAllButtons()
 		{
-			firstLeftButton.Text    = board.Grid[0, 0].ToString(); 
-			firstMiddleButton.Text  = board.Grid[0, 1].ToString();
-			firstRightButton.Text   = board.Grid[0, 2].ToString();
-			secondLeftButton.Text   = board.Grid[1, 0].ToString();
-			secondMiddleButton.Text = board.Grid[1, 1].ToString();
-			secondRightButton.Text  = board.Grid[1, 2].ToString();
-			thirdLeftButton.Text    = board.Grid[2, 0].ToString();
-			thirdMiddleButton.Text  = board.Grid[2, 1].ToString();
-			thirdRightButton.Text   = board.Grid[2, 2].ToString();
+			firstLeftButton.Text    = ConvertToString(board.Grid[0, 0]);
+			firstMiddleButton.Text  = ConvertToString(board.Grid[0, 1]);
+			firstRightButton.Text   = ConvertToString(board.Grid[0, 2]);
+			secondLeftButton.Text   = ConvertToString(board.Grid[1, 0]);
+			secondMiddleButton.Text = ConvertToString(board.Grid[1, 1]);
+			secondRightButton.Text  = ConvertToString(board.Grid[1, 2]);
+			thirdLeftButton.Text    = ConvertToString(board.Grid[2, 0]);
+			thirdMiddleButton.Text  = ConvertToString(board.Grid[2, 1]);
+			thirdRightButton.Text   = ConvertToString(board.Grid[2, 2]);
 		}
 
 		private void disableAllButtons()
@@ -114,13 +106,36 @@ namespace ticTacToe
 		private void aiButton_Click(object sender, EventArgs e)
 		{
 			takeAIturn();
+			updateAllButtons();
 			enableAllButtons();
+			updateWinnerLabel();
 		}
 
 		private void takeAIturn()
 		{
 			AI ai = new AI();
-
+			board = ai.minimax(board, 0);
 		}
+
+		private void updateWinnerLabel()
+        {
+			if (board.Winner == 0)
+				WinnerLabel.Text = "X Wins";
+
+			if (board.Winner == 2)
+				WinnerLabel.Text = "0 Wins";
+
+			if (board.DetectGameOver && board.Winner != 0 && board.Winner != 2)
+				WinnerLabel.Text = "Draw";
+		}
+
+		private string ConvertToString(int i)
+        {
+			if (i == -1)
+				return " ";
+			else if (i == 0)
+				return "0";
+			else return "X";
+        }
 	}
 }
