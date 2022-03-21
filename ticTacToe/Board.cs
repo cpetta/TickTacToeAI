@@ -23,6 +23,7 @@ namespace ticTacToe
 			Grid = b.Grid;
         }
 
+        // Return 0 for AI Loss, 1 for Draw, 2 for AI win.
         public int Winner
         {
             get
@@ -33,13 +34,13 @@ namespace ticTacToe
                     if (Grid[0, i].charVal == 'X'
                         && Grid[1, i].charVal == 'X'
                         && Grid[2, i].charVal == 'X')
-                        return 1;
+                        return 0;
 
                     // Vertical
                     if (Grid[i, 0].charVal == 'X'
                         && Grid[i, 1].charVal == 'X'
                         && Grid[i, 2].charVal == 'X')
-                        return 1;
+                        return 0;
 
                     // Horizontal
                     if (Grid[0, i].charVal == '0'
@@ -57,13 +58,13 @@ namespace ticTacToe
                 if (Grid[0, 0].charVal == 'X'
                     && Grid[1, 1].charVal == 'X'
                     && Grid[2, 2].charVal == 'X')
-                    return 1;
+                    return 0;
 
                 // Diaganal
                 if (Grid[0, 2].charVal == 'X'
                     && Grid[1, 1].charVal == 'X'
                     && Grid[2, 0].charVal == 'X')
-                    return 1;
+                    return 0;
 
                 // Diaganal
                 if (Grid[0, 0].charVal == '0'
@@ -78,7 +79,7 @@ namespace ticTacToe
                     return 2;
 
                 // No winners
-                return 0;
+                return 1;
             }
         }
 
