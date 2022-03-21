@@ -103,5 +103,25 @@ namespace ticTacToe
                 return true;
             }
         }
+
+        public List<int[]> EmptySpaces
+        {
+            get {
+                List<int[]> spaces = new List<int[]>();
+
+                for(int i = 0; i < 3; i++)
+                {
+                    for(int j = 0; j < 3; j++)
+                    {
+                        if(Grid[i, j].charVal == ' ')
+                        {
+                            int[] arr = {i,j};
+                            spaces.Add(arr);
+                        }
+                    }
+                }
+                return spaces;
+            }
+        }
     }
 }
