@@ -62,13 +62,13 @@ namespace ticTacToe
 			updateAllButtons();
 			disableAllButtons();
 			
-			if(board.Winner == 1)
+			if(board.Winner == 0)
 				WinnerLabel.Text = "X Wins";
 
 			if (board.Winner == 2)
 				WinnerLabel.Text = "0 Wins";
 
-			if (board.DetectGameOver && board.Winner != 0)
+			if (board.DetectGameOver && board.Winner == 0)
 				WinnerLabel.Text = "Draw";
 		}
 
@@ -119,6 +119,7 @@ namespace ticTacToe
 
 		private void takeAIturn()
 		{
+			AI ai = new AI();
 
 		}
 	}
