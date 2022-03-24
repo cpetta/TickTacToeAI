@@ -114,7 +114,8 @@ namespace ticTacToe
 		private void takeAIturn()
 		{
 			AI ai = new AI();
-			board = ai.minimax(board, 0);
+			Tree bt = new Tree(board, 0);
+			board = ai.minimax(bt, 0);
 		}
 
 		private void updateWinnerLabel()
