@@ -13,7 +13,7 @@ namespace ticTacToe
         public int value;
 
         public Tree Parrent;
-        public List<Tree> children;
+        public List<Tree> children = new List<Tree>();
         public Tree(Board b, int turn)
         {
             board = b;
@@ -29,7 +29,5 @@ namespace ticTacToe
             Parrent = p;
             p.children.Add(this);
         }
-
-
     }
 }
