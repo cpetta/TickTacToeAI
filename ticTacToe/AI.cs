@@ -13,12 +13,17 @@ namespace ticTacToe
             Tree root = new Tree(board, player);
             root = buildTree(root, player);
             minimax(root, player);
-            Board moveTomake = root.children.Last().board;
+            Tree moveToMake = new Tree(board, player);
+            if (root.children.Count > 0)
+            {
+                moveToMake = root.children.Last();
+            }
             foreach(Tree tree in root.children)
             {
-                if()
+                if (tree.value > moveToMake.value)
+                    moveToMake = tree;
             }
-            return minimax(root, player).board;
+            return moveToMake.board;
         }
 
         public Tree minimax(Tree b, int player)
@@ -26,12 +31,13 @@ namespace ticTacToe
             // If the game is over either because there's a winner or there are no more empty spaces.
             if (b.board.GameOver)
             {
-                return b.board;
+                b.value = b.board.Winner;
+                return b;
             }
 
             if(player == 0)
             {
-                b.value = int.MaxValue;
+                b.value = int.MinValue;
                 foreach(Tree child in b.children)
                 {
                     b.value =  Math.Max(b.value, minimax(child, 1).value);
@@ -45,22 +51,7 @@ namespace ticTacToe
                     b.value = Math.Min(b.value, minimax(child, 0).value);
                 }
             }
-
-
-            foreach (Tree board in b.children)
-            {
-                if (player == 0)
-                {
-                    if (minimax(board, 1).Winner > moveToMake.Winner)
-                        moveToMake = board;
-                }
-                else
-                {
-                    if (minimax(board, 0).Winner < moveToMake.Winner)
-                        moveToMake = board;
-                }
-            }
-            return moveToMake;
+            return b;
         }
 
         private Tree buildTree(Tree b, int player)
