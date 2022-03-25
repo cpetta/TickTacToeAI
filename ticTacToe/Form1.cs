@@ -114,8 +114,7 @@ namespace ticTacToe
 		private void takeAIturn()
 		{
 			AI ai = new AI();
-			Tree bt = new Tree(board, 0);
-			board = ai.minimax(bt, 0);
+			board = ai.makeMove(board, 0);
 		}
 
 		private void updateWinnerLabel()
@@ -138,5 +137,11 @@ namespace ticTacToe
 				return "0";
 			else return "X";
         }
-	}
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+			board = new Board();
+			updateAllButtons();
+		}
+    }
 }
